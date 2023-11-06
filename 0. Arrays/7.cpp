@@ -3,23 +3,23 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+using namespace std;
 
-void findDuplicates(const std::vector<int>& arr) {
-  std::unordered_map<int, int> countMap;
+void findDuplicates(vector<int> arr) {
+  unordered_map<int,int> countMap;
 
-  for (int num : arr) {
+  for(int num:arr){
     countMap[num]++;
   }
-
-  for (const auto& pair : countMap) {
-    if (pair.second > 1) {
-      std::cout << "Duplicate: " << pair.first << " (Count: " << pair.second << ")\n";
+  for(const auto pair:countMap){
+    if(pair.second>1){
+      cout<<pair.first<<" "<<pair.second<<endl;
     }
   }
 }
 
 int main() {
-  std::vector<int> arr = {1, 2, 3, 4, 3, 2, 5, 6, 1};
+  vector<int> arr = {1, 2, 3, 4, 3, 2, 5, 6, 1};
   findDuplicates(arr);
   return 0;
 }
