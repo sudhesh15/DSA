@@ -42,7 +42,7 @@ int main(){
   cout<<node1 -> next <<endl;
 
   Node* head = node1; //head pointed to node1
-  Node* tail = node1; //head pointed to node1
+  Node* tail = node1; //tail pointed to node1
   insertAtHead(head, 5);
   insertAtTail(tail, 15);
   printLinkedList(head);
